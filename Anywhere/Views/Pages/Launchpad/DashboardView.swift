@@ -52,7 +52,7 @@ struct DashboardView: View {
             }
             .containerBackground(.clear, for: .navigation)
             .toolbar {
-                if #available(iOS 27.0, *) {
+                if #available(iOS 27.0, *), !ProcessInfo.processInfo.isiOSAppOnMac {
                     ToolbarOverflowMenu {
                         Button {
                             Task { await connectionStats.resetStats() }

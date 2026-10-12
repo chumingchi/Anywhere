@@ -73,7 +73,7 @@ struct MITMView: View {
                 ToolbarItem {
                     EditButton()
                 }
-                if #available(iOS 27.0, *) {
+                if #available(iOS 27.0, *), !ProcessInfo.processInfo.isiOSAppOnMac {
                     ToolbarOverflowMenu {
                         Button {
                             showAddSheet = true
